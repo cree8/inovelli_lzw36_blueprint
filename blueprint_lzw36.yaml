@@ -121,7 +121,7 @@ action:
 - variables:
     button_id: '{{ trigger.event.data.property_key_name }}'
     press_count: '{{ trigger.event.data.value }}'
-    device_name: {{ device_id }}
+    device_name: !input inovelli_fan_switch
 - service: logbook.log
   data:
     name: Button Id
